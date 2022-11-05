@@ -61,6 +61,7 @@ class Dealer:
         """
         # The first card needs to be handled differently
         if self.first_turn:
+            print()
             temp_card = Card()
             temp_card.pick()
             self.previous = temp_card.value
@@ -128,6 +129,7 @@ class Dealer:
         print(f"Your score is: {self.total_score}")
         keep_playing = input("Draw again? [y/n] ")
         self.is_playing = (keep_playing == "y")
+        print()
 
         # Exit the game gracefully
         if not self.is_playing:
